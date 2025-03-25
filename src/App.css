@@ -1,0 +1,442 @@
+/* Modern CSS Reset and Base Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: white;
+  margin: 0;
+  padding: 0;
+  color: #2d3748;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Container Style */
+
+div {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 2rem;
+  background: white;
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+}
+/* Modern Heading */
+h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Input Fields with Modern Styling */
+input,
+select,
+textarea {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Ensure consistent font */
+  width: 100%;
+  padding: 12px 16px;
+  margin: 4px 0; /* Reduce vertical margin */
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+textarea {
+  resize: none; /* Prevent resizing for consistent look */
+  height: 120px; /* Set a fixed height similar to inputs */
+}
+
+/* Labels with Modern Typography */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 2px; /* Keep margin small for tighter spacing */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+
+/* Beautiful Buttons */
+button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Primary Action Button */
+button:not(li button) {
+  background: linear-gradient(135deg, #3b82f6, #4f46e5);
+  color: white;
+  width: 100%;
+  margin: 6px 0; /* Match the vertical margin with input fields */
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+button:not(li button):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Logout Button */
+button[onClick*="handleLogout"] {
+  background: white;
+  color: #4a5568;
+  border: 2px solid #e2e8f0;
+  max-width: 200px;
+}
+
+button[onClick*="handleLogout"]:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Internship List Items */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+li {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3b82f6, #4f46e5);
+}
+
+li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Internship Item Content */
+li strong {
+  color: #1a202c;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 100px;
+}
+
+/* Action Buttons in List Items */
+li button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+li button:first-of-type {
+  background: #ef4444;
+  color: white;
+}
+
+li button:last-of-type {
+  background: #3b82f6;
+  color: white;
+}
+
+li button:hover {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+}
+
+/* Links Styling */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Status Badge */
+li [data-status] {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div {
+    margin: 10px;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  li {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+.login-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center; /* Center the text */
+}
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  width: 100%; /* Make the container full width */
+  max-width: 400px; /* Optionally, set a max width */
+  margin: 0 auto; /* Center align the form */
+  margin-bottom: 8px;
+}
+
+input,
+button {
+  width: 100%; /* Match the width of the container */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+.additional-info-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  resize: none; /* Prevent resizing for consistent look */
+  height: 120px; /* Set a fixed height similar to input */
+}
+
+.additional-info-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: white;
+}
+/* Input Fields with Modern Styling */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 6px 0; /* Reduce vertical margin */
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background: white;
+}
+
+/* Labels with Modern Typography */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.centered-heading {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.sort-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sort-container label {
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.sort-container select {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+  background: #f8fafc;
+}
+
+.sort-container select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+/* Reduce the vertical spacing for form groups */
+.form-group {
+  margin-bottom: 8px; /* Reduce spacing between form groups */
+  padding: 0; /* Ensure no extra padding */
+}
+
+/* Label styling for tighter spacing */
+label {
+  margin-bottom: 4px; /* Small gap between the label and the input */
+  font-weight: 600; /* Keep boldness for readability */
+  font-size: 0.875rem; /* Ensure consistent font size */
+  color: #4a5568; /* Text color */
+}
+
+/* Input, Select, and Textarea styling */
+input,
+select,
+textarea {
+  margin: 0; /* Remove any default margin */
+  padding: 8px 12px; /* Adjust padding for smaller height */
+  font-size: 1rem; /* Keep font size consistent */
+  border: 2px solid #e2e8f0;
+  border-radius: 8px; /* Slightly smaller border radius */
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+/* Focus styles for inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  background: white;
+}
+/* Adjust spacing in the login form */
+.login-container input {
+  margin-bottom: 16px; /* Consistent gap between inputs */
+  padding: 12px 16px;
+  width: 100%;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+}
+/* Sort By Dropdown and Search Bar Styling */
+.sort-container select,
+.search-bar {
+  height: 40px; /* Adjust height to ensure they are equal */
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.sort-container select {
+  margin-right: 10px; /* Space between Sort By and Search Bar */
+}
+/* Compact View Styling */
+.compact-button {
+  background: linear-gradient(135deg, #3b82f6, #4f46e5); /* Gradient background */
+  color: white; /* Text color */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 16px; /* Add space above if needed */
+  width: 100%; /* Match the width of other buttons */
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2); /* Consistent shadow */
+}
+
+.compact-button:hover {
+  transform: translateY(-2px); /* Slight hover effect */
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3); /* Hover shadow */
+}
+
+.compact-button:active {
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.compact-item {
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.compact-item p {
+  margin: 5px 0;
+}
